@@ -1,0 +1,24 @@
+Heroku (staging)
+app: nameless-scrubland-85629
+url: https://nameless-scrubland-85629.herokuapp.com/
+
+To place order:
+https://membership.dietliberationformula.com/order21922674
+Stripe Test Card #4012888888881881
+
+Stripe account:
+gregjohnsoncoach@gmail.com
+@Timber01984
+Webhook
+event: customer.subscription.created
+url to call (staging): https://nameless-scrubland-85629.herokuapp.com/onSubscriptionCreate
+url to call (production): https://guarded-beyond-87567.herokuapp.com/onSubscriptionCreate
+
+Heroku (production)
+account:
+gregjohnsoncoach@gmail.com
+@Timber01984
+app: guarded-beyond-87567
+url: https://guarded-beyond-87567.herokuapp.com/
+
+To switch deployment between staging and production need to modify heroku app name in .git/config
