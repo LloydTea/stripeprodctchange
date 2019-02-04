@@ -1,13 +1,13 @@
 'use strict';
 
 // Set your secret key: remember to change this to live secret key in production
-const stripe = require("stripe")(process.env.STRIPE_KEY);
+const stripe = require("stripe")('sk_test_D8egme1hdXiN5xVD6pGTMagm');
 
 exports.onSubscriptionCreated = function(req, res) {
-  const PROD_A = process.env.PROD_A;
-  const PROD_A_PLAN_ID = process.env.PROD_A_PLAN_ID;
-  const PROD_B = process.env.PROD_B;
-  const PROD_B_PLAN_ID = process.env.PROD_B_PLAN_ID;
+  const PROD_A = prod_ESDXAeESlS8IHe;
+  const PROD_A_PLAN_ID = 221;
+  const PROD_B = prod_ESDaUCaVuyZv1m;
+  const PROD_B_PLAN_ID = 222;
   var customerID = req.body.data.object.customer;
   var product = req.body.data.object.plan.name;
   var planID = req.body.data.object.plan.id;
