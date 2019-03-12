@@ -4,9 +4,10 @@
 const stripe = require("stripe")('sk_test_D8egme1hdXiN5xVD6pGTMagm');
 
 exports.onSubscriptionCreated = function(req, res) {
-  const PROD_A = prod_ESDXAeESlS8IHe;
+  console.log(JSON.stringify(req.body))
+  const PROD_A = 'prod_ESDXAeESlS8IHe';
   const PROD_A_PLAN_ID = 221;
-  const PROD_B = prod_ESDaUCaVuyZv1m;
+  const PROD_B = 'prod_ESDaUCaVuyZv1m';
   const PROD_B_PLAN_ID = 222;
   var customerID = req.body.data.object.customer;
   var product = req.body.data.object.plan.name;
@@ -43,12 +44,9 @@ exports.onSubscriptionCreated = function(req, res) {
   }
 };
 
-exports.testGetRequest = function (req, res){
-  console.log("New payload gotten: ", JSON.stringify(req.body))
-<<<<<<< HEAD
-  console.log("Query strings received: ", JSON.stringify(req.params));
-=======
->>>>>>> 0147909076c5c761bb9ffe67135c4589518227b7
+exports.confirmOnSubscriptionCreated = function (req, res){
+  
+  console.log('Retrieved onSubscriptionCreated webhook request!');
   res.sendStatus(200)
 }
 
