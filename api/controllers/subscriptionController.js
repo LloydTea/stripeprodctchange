@@ -43,6 +43,12 @@ exports.onSubscriptionCreated = function(req, res) {
   }
 };
 
+exports.testGetRequest = function (req, res){
+  console.log("New payload gotten: ", JSON.stringify(req.body))
+  console.log("Query strings received: ", JSON.stringify(req.params));
+  res.sendStatus(200)
+}
+
 function wait(ms){
   var start = new Date().getTime();
   var end = start;
