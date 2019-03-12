@@ -45,7 +45,10 @@ exports.onSubscriptionCreated = function(req, res) {
 
 exports.testGetRequest = function (req, res){
   console.log("New payload gotten: ", JSON.stringify(req.body))
+<<<<<<< HEAD
   console.log("Query strings received: ", JSON.stringify(req.params));
+=======
+>>>>>>> 0147909076c5c761bb9ffe67135c4589518227b7
   res.sendStatus(200)
 }
 
